@@ -34,14 +34,14 @@ export default function Hero() {
         <div className="lg:col-span-7 space-y-6 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-50 to-orange-50 text-amber-800 px-4 py-2 rounded-full text-xs font-semibold border border-amber-200/60 shadow-sm">
             <Sparkles className="h-3.5 w-3.5 text-amber-600 animate-spin" style={{ animationDuration: '4s' }} />
-            Великолепие Жизни — Июнь 2026
+            Великолепие Жизни
           </div>
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
             Своя квартира в Москве — <br/>
             это реальность <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">для каждого</span>
           </h1>
           <p className="text-lg text-slate-600 max-w-xl leading-relaxed">
-            Помогаем находить и выгодно покупать квартиры в новостройках под любой бюджет. Подберем идеальный ЖК, согласуем субсидированную ипотеку и найдем скрытые скидки от застройщиков.
+            Помогаем находить и выгодно покупать квартиры в новостройках под любой budget. Подберем идеальный ЖК, согласуем субсидированную ипотеку и найдем скрытые скидки от застройщиков.
           </p>
           
           <ul className="space-y-4 pt-2">
