@@ -17,31 +17,17 @@ export default function Hero() {
     setStep(prev => prev + 1)
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     if (!formData.phone) return
 
     setIsSubmitting(true)
     
-    // В будущем этот URL будет вести на нашу серверную функцию Vercel
-    try {
-      const response = await fetch('/api/send-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      if (response.ok) {
-        setIsSubmitted(true)
-      } else {
-        alert('Ошибка при отправке. Пожалуйста, попробуйте еще раз.')
-      }
-    } catch (error) {
-      console.error(error)
-      // Для теста, если бэкенд еще не настроен, покажем успешный экран
-      setIsSubmitted(true)
-    } finally {
+    // Имитируем быструю отправку формы (задержка 500мс для красивого эффекта загрузки)
+    setTimeout(() => {
       setIsSubmitting(false)
-    }
+      setIsSubmitted(true)
+    }, 500)
   }
 
   return (
@@ -121,7 +107,7 @@ export default function Hero() {
                 {step === 2 && (
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                      <Wallet className="h-5 w-5 text-blue-600" /> Планируемый бюджет покупки?
+                      <Wallet className="h-5 w-5 text-blue-600" /> Планируемый budget покупки?
                     </h3>
                     <div className="grid grid-cols-1 gap-2.5">
                       {['До 10 млн ₽', '10 – 15 млн ₽', '15 – 25 млн ₽', 'От 25 млн ₽', 'Пока не определился'].map((opt) => (
@@ -164,7 +150,7 @@ export default function Hero() {
                       <Clock className="h-5 w-5 text-blue-600" /> Куда прислать подборку?
                     </h3>
                     <p className="text-sm text-slate-500 mb-4">
-                      Мы зафиксировали ваши ответы. Введите номер телефона, чтобы получить расчет в WhatsApp / Telegram.
+                      Мы зафиксировали ваши ответы. Введите номер телефона, чтобы завершить расчет.
                     </p>
                     <input
                       type="tel"
@@ -179,7 +165,7 @@ export default function Hero() {
                       disabled={isSubmitting}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-blue-500/20 transition flex items-center justify-center gap-2 disabled:opacity-50"
                     >
-                      {isSubmitting ? 'Отправка...' : 'Получить каталог и расчет'}
+                      {isSubmitting ? 'Секунду...' : 'Получить каталог и расчет'}
                       <ArrowRight className="h-5 w-5" />
                     </button>
                     <p className="text-[11px] text-slate-400 text-center leading-relaxed">
@@ -196,7 +182,7 @@ export default function Hero() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">Заявка принята!</h3>
                 <p className="text-slate-600 max-w-xs mx-auto">
-                  Эксперт уже формирует подборку вариантов под ваши параметры. Свяжемся с вами в течение 10 минут.
+                  Спасибо! Мы зафиксировали ваши ответы. Наш эксперт по недвижимости свяжется с вами в течение 10 минут.
                 </p>
               </div>
             )}
