@@ -1,7 +1,8 @@
 import React from 'react'
 import Hero from './components/Hero.jsx'
-import About from './components/About.jsx'
 import Mortgage from './components/Mortgage.jsx'
+import About from './components/About.jsx'
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans antialiased text-slate-900">
@@ -30,6 +31,7 @@ export default function App() {
       {/* Главные разделы сайта */}
       <main>
         <Hero />
+        <Mortgage />
         <About />
       </main>
 
