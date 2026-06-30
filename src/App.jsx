@@ -9,21 +9,21 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans antialiased text-slate-900">
       
-      {/* Шапка сайта */}
-      <header className="bg-white border-b border-slate-100 sticky top-0 z-50">
+{/* Шапка сайта */}
+      <header className="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex flex-col">
-            <div className="font-black text-xl tracking-wider text-slate-900 leading-none">
+            <div className="font-black text-2xl tracking-wider text-slate-900 leading-none">
               ВЕЛИКОЛЕПИЕ<span className="text-amber-600">ЖИЗНИ</span>
             </div>
-            <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1">
+            <span className="text-[10px] text-amber-600 uppercase tracking-widest font-black mt-1.5 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-100 inline-block w-max">
               Недвижимость, доступная для всех
             </span>
           </div>
           
           <div className="flex items-center gap-6">
-            <span className="text-sm text-slate-400 hidden lg:inline">Авторский подбор квартир от Жанны Великой</span>
-            <a href="tel:+79255360095" className="font-bold text-lg text-slate-800 hover:text-amber-600 transition bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
+            <span className="text-sm font-medium text-slate-400 hidden lg:inline">Авторский подбор квартир от Жанны Великой</span>
+            <a href="tel:+79255360095" className="font-extrabold text-base text-slate-900 hover:text-white hover:bg-amber-600 transition duration-300 bg-slate-100 px-5 py-2.5 rounded-xl border border-slate-200/40 shadow-sm active:scale-95">
               8 (925) 536-00-95
             </a>
           </div>
