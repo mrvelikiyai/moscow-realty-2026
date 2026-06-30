@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           </div>
           
           <div className="flex items-center gap-6">
-            <span className="text-sm text-slate-400 hidden lg:inline">Авторский подбор квартир от Екатерины Великой</span>
+            <span className="text-sm text-slate-400 hidden lg:inline">Авторский подбор квартир от Жанны Великой</span>
             <a href="tel:+79255360095" className="font-bold text-lg text-slate-800 hover:text-amber-600 transition bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
               8 (925) 536-00-95
             </a>
@@ -26,9 +27,10 @@ export default function App() {
         </div>
       </header>
 
-      {/* Главный экран и Квиз */}
+      {/* Главные разделы сайта */}
       <main>
         <Hero />
+        <About />
       </main>
 
       {/* Подвал сайта */}
@@ -39,7 +41,7 @@ export default function App() {
               ВЕЛИКОЛЕПИЕ<span className="text-amber-500">ЖИЗНИ</span>
             </div>
             <p className="text-xs text-slate-400 mt-2 max-w-sm">
-              Проект Екатерины Великой. Мы доказываем, что комфортное и современное жилье в Москве — это реальность, доступная для каждого.
+              Проект Жанны Великой. Мы доказываем, что комфортное и современное жилье в Москве — это реальность, доступная для каждого.
             </p>
           </div>
           <div className="md:text-right space-y-2">
