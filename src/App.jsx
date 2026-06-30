@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './components/Hero.jsx'
 import Mortgage from './components/Mortgage.jsx'
+import Cases from './components/Cases.jsx'
 import About from './components/About.jsx'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
       <main>
         <Hero />
         <Mortgage />
+        <Cases />
         <About />
       </main>
 
